@@ -1,0 +1,7 @@
+{
+  "name": "findDoctor",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
