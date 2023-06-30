@@ -1,0 +1,105 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Danh sách giáo viên [{{listTeacher.length}}]</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div>
+    <div class="box">
+      <ion-searchbar class="searchbar"></ion-searchbar>
+    </div>
+    <!-- <div class="header box">
+      <ion-icon class="chevron-back" name="chevron-back"></ion-icon>
+      <div class="tittle"><h3>All Teachers</h3></div>
+    </div> -->
+    <div class="subject-list">
+      <button (click)="chooseAll()">All</button>
+      <button (click)="chooseSubject()">Toán</button>
+      <button>Tiếng Anh</button>
+      <button>Địa lý</button>
+      <button>Lịch sử</button>
+      <button>Ngữ văn</button>
+    </div>
+    <div>
+      <ion-card class="item" *ngFor="let session of listTeacher" style="border: none !important; box-shadow: none;">
+        <div style="flex: 1;">
+          <div style="background-color: #e6e2e2; width: 100%; height:100%;border-radius: 10px">
+            <img style="width: 80%;margin-left: 10%;" src="assets/image/profileTeacher.png" alt="">
+          </div>
+        </div>
+        <div class="item-infor" >
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 0 3%;">
+            <h3 style="font-weight: 600; margin-top: 0 !important;">{{session.name}}</h3>
+          </div> 
+          <div style="display: flex; padding: 0 3%;">
+            <div style="width:  78%;">
+              <div style="display: flex; align-items: center; margin-bottom: 8%;">
+                <ion-icon name="star" style="color: #F89603; font-size: 20px !important;"></ion-icon>
+                <span style="margin-left: 5%;">{{session.rate}} (1234 Review)</span>
+              </div>
+              <div>
+                <div class="profile"><ion-icon class="headset" name="headset"> </ion-icon>
+                  <h3>  {{session.phone}}</h3>
+                </div>
+                
+              </div>
+            </div>
+            <div style="width: 22%;margin-top: -10%;">
+              <div style="width: fit-content; display: flex; flex-wrap: wrap;">
+                <ion-icon class="button-icon heart" name="heart-outline"></ion-icon>
+                <span class="social-item">1K Like</span>
+              </div>
+              <div style="width: 100%; display: flex; flex-wrap: wrap; ">
+                <ion-icon (click)="setOpen()" class="button-icon review" name="chatbubbles-outline"></ion-icon>
+                <span class="social-item">2K Review</span>
+              </div>
+              <div style="width: 100%; display: flex; flex-wrap: wrap; ">
+                <ion-icon class="button-icon follow" name="person-outline"></ion-icon>
+                <span class="social-item">3K Follow</span>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <div style="width: 100%;">
+          <div class="profile"><ion-icon class="location" name="location"></ion-icon>
+            <h3>  {{session.address}}</h3>
+          </div>
+          <div class="profile"><ion-icon class="book" name="book"></ion-icon>
+            <h3 style="margin-left: 5px !important;" *ngFor="let sub of session.subjectList"> {{sub.subject}}
+            </h3>
+          </div>
+         
+         
+          
+        </div>
+      </ion-card>
+
+
+    </div>
+  </div>
+
+  <ion-item>
+    
+  <ion-modal style="z-index: 5;" [isOpen]="isModalOpen">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Review Mrs.Thao</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="setOpen()">Save</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-textarea
+    placeholder="Type something here"
+    [autoGrow]="true">
+  </ion-textarea>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-item>
+
+</ion-content>

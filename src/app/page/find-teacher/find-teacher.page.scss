@@ -1,0 +1,172 @@
+.box {
+    display: flex;
+    align-items: center;
+    padding: 0 2%;
+}
+.subject-list{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+    width: 130%;
+}
+.subject-list button{
+    padding: 6px 12px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1px solid #4c8dff;
+    color: black;
+    font-weight: 600;
+    
+}
+.chevron-back {
+    width: 20%;
+    font-size: 30px !important;
+}
+
+.tittle {
+    width: 80%;
+    display: flex;
+    // justify-content:center;
+    margin-left: 17%;
+}
+
+.tittle h3 {
+    color: #198EB6;
+    text-align: center;
+    font-size: 26px;
+    font-family: 'Averia Sans Libre';
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -0.52px;
+}
+
+.searchbar {
+    border-radius: 10px;
+    padding: 0 !important;
+
+}
+
+.item {
+    border-radius: 10px;
+    // border: 1px solid #000;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item h3 {
+    color: #000;
+    font-size: 20px;
+    font-family: 'Averia Sans Libre';
+    line-height: 100%;
+    letter-spacing: -0.4px;
+}
+
+.item-infor {
+    width: 70%;
+    // padding: 0% 3%;
+}
+
+.item-infor button {
+    margin-top: 10%;
+    border-radius: 12px;
+    background: #198EB6;
+    color: white;
+    padding: 7px 14px;
+}
+
+.item-infor-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.item-infor-detail span {
+    color: #000;
+    font-size:20px;
+    font-family: 'Averia Sans Libre';
+    
+}
+.item-sub span{ 
+    // font-weight: 600;
+    font-size: 15px;
+    font-family: 'Arial';
+
+    // width: ;
+}
+.item-sub-detail{
+    display: flex;
+    align-items: center;
+}
+.profile{
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+
+}
+.item img{
+    padding: 10%;
+    // border-radius: 25px;
+}
+.profile span{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+
+.profile h3{
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 17px;
+    margin-left: 10px !important;
+}
+.profile span{
+    width: 30%;
+}
+.button-icon{
+    padding: 3px;
+    // border: 1.5px groove;
+}
+.heart{
+    color: red;
+}
+.review{
+    color: blue;
+}
+.follow{
+    color: brown;
+}
+.social-item{
+    width: 100%;
+    font-size: 10px;
+}
+.profile ion-icon{
+    font-size: 20px;
+    font-weight: bold;
+}
+.location{
+    color: #CDDC39;
+}
+.headset{
+    color: #D84315;
+}
+.book{
+    color: #FF4081;
+}
+
+ion-modal {
+    --height: 50%;
+    --border-radius: 16px;
+    --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
+  
+  ion-modal::part(backdrop) {
+    background: rgba(209, 213, 219);
+    opacity: 1;
+  }
+  
+  ion-modal ion-toolbar {
+    --background: rgb(14 116 144);
+    --color: white;
+  }
